@@ -1,8 +1,8 @@
 <p *ngIf="countryExist">Country not found</p>
-<div class="flex gap-[3rem] flex-wrap" *ngIf="!countryExist">
-    <div class="bg-white w-[15rem] h-[18rem] rounded-lg flex flex-col gap-2" *ngFor="let country of countries">
-        <img class="w-full rounded-tl-lg rounded-tr-lg h-[7rem]" src="{{country.flags.png}}" alt="">
-        <div class="pt-6 pb-2 pl-3">
+<div class="flex gap-[2rem] flex-wrap md:justify-around lg:justify-between" *ngIf="!countryExist">
+    <div class="bg-white w-[15rem] h-[18rem] rounded-lg flex flex-col" *ngFor="let country of countries">
+        <img class="w-full rounded-tl-lg rounded-tr-lg h-[8rem]" src="{{country.flags.png}}" alt="">
+        <div class="pt-4 pb-2 pl-3">
             <p class="font-bold text-xl mb-2">{{country.name.common}}</p>
             <p class="font-medium text-lg">Population : <span class="font-medium">{{country.population |
                     number:'1.0':'en-US'}}</span>

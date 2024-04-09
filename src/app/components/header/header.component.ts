@@ -8,16 +8,22 @@ import { log } from 'node:console';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  lightMode = 'hidden';
-  darkMode = 'block';
-  mode = 'Dark';
+  lightMode: string = 'hidden';
+  darkMode: string = 'block';
+  mode: string = 'Dark';
+  background: string = '';
+  textColor: string = '';
 
   switchMode() {
     if (this.lightMode == 'hidden') {
       this.darkMode = 'hidden';
       this.lightMode = 'block';
-      this.mode = 'LIght';
+      this.mode = 'Light';
+      this.background = '#ffffff';
+      this.textColor = '#000000';
     } else {
+      this.background = '#202c37';
+      this.textColor = '#ffffff';
       this.lightMode = 'hidden';
       this.darkMode = 'block';
       this.mode = 'Dark';
