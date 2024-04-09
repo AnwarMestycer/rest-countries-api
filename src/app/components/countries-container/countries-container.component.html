@@ -1,0 +1,4 @@
+<div class="p-6 w-11/12 flex flex-col justify-center gap-[2rem] pl-[6rem]">
+    <app-search-bar (valueChanged)="onValueChanged($event)" (region)="onSelectValue($event)"></app-search-bar>
+    <app-country [countryName]="countryName" [region]="region"></app-country>
+</div>
